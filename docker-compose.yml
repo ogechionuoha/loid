@@ -1,0 +1,11 @@
+version: 3.3
+services:
+    loid:
+        build: .
+        volumes:
+            -"./images:/loiddataset/images"
+            -"./log:/loiddataset/log"
+        tty: true
+        stdin_open: true
+        entrypoint :  
+            - /bin/bash
